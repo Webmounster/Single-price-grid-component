@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 375px;
+    height: 870px;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: var(--LightGray);
+    background-color: var(--LightGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 310px;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 721px;
+}
+
+/* ---------------- SUPERIOR ----------------- */
+.superior {
+    background-color: white;
+    height: 267px;
+    padding: 25px;
+}
+
+.superior h2 {
+    color: var(--Cyan);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.superior h3 {
+    color: var(--BrightYellow);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.superior p {
+    margin-top: 10px;
+    color: var(--GrayishBlue);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+/* ---------------- MEDIO ----------------- */
+.doscards {
+    display: flex;
+    flex-direction: column;
+}
+.medio {
+    background-color: var(--Cyan);
+    padding: 25px;
+    height: 227px;
+}
+
+.medio h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.medio .precio-container {
+    display: flex;
+    align-items: center;
+}
+
+.medio .precio {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.medio .mes {
+    color: var(--GrayishBlue);
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.medio p {
+    margin: 10px 0 25px 0;
+    font-weight: 400;
+}
+
+.medio a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--LightGray);
+    background-color: var(--BrightYellow);
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px 1px rgb(104, 99, 99);
+}
+
+/* ---------------- INFERIOR ----------------- */
+.inferior {
+    background-color: hsl(179, 56%, 52%);
+    padding: 25px;
+    height: 227px;
+}
+
+.inferior h3 {
+    margin-bottom: 15px;
+}
+
+ul {
+    line-height: 1.2rem;
+}
+
+li {
+    list-style: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* ----------------- FOOTER ------------------------ */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* -------------------- MEDIA QUERY ----------------------- */
+
+@media screen and (min-width: 1440px) {
+    body {
+        width: 1440px;
+        height: 800px;
+    }
+
+    .container {
+        width: 640px;
+        height: 476px;
+    }
+
+    /* ---------------- SUPERIOR ----------------- */
+    .superior {
+        height: 214px;
+        padding: 41px 43px;
+    }
+
+    .superior p {
+        width: 515px;
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .doscards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .medio {
+        display: flex;
+        flex-direction: column;
+        border-bottom-left-radius: 8px;
+        padding: 43px;
+        height: 260px;
+    }
+
+    .medio h3 {
+        width: 245px;
+    }
+
+    .medio a {
+        width: 245px;
+    }
+
+    .inferior {
+        padding: 43px;
+        height: 260px;
+        border-bottom-right-radius: 8px;
+        background-color: hsl(179, 53%, 48%);
+    }
+}
